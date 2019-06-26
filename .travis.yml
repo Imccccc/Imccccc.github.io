@@ -1,10 +1,13 @@
 language: node_js
 node_js: --lts
 before_script:
-  - git config user.name "Imccccc"
-  - git config user.email "zqasder@gmail.com"
-  - sed -i'' "s~https://github.com/Imccccc/Imccccc.github.io.git~https://${GITHUB_ACCESS_TOKEN}@github.com/Imccccc/Imccccc.github.io.git~" _config.yml
+  - git config user.name "YOUR_NAME"
+  - git config user.email "YOUR_EMAIL"
+  - sed -i'' "s~https://github.com/Imccccc/Imccccc.github.io.git~https://${ACCESS_TOKEN}@github.com/Imccccc/Imccccc.github.io.git.git~" _config.yml
 script:
   - hexo g
   - hexo d
-
+on: 
+  branch:
+    - master
+    - develop
